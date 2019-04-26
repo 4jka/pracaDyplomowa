@@ -1,0 +1,15 @@
+<form class="wrapper-searchField">
+    <input type="text" class="searchField" placeholder="Obszar" #location
+           (focus)="addLocationFocus()" (input)="buildListLocation()" (blur)="removeLocationFocus()">
+    <input type="text" class="searchField" placeholder="Preferencje" #interest
+           (focus)="addInterestFocus()" (input)="buildListInteres()" (blur)="removeInterestFocus()">
+</form>
+
+<ul class="searchList listLocation">
+    <li class="list-item" *ngFor="let item of listLocation" (click)="locationItemClick(item)">{{ item.name }}</li>
+</ul>
+<ul class="searchList listInterest">
+    <li class="list-item" *ngFor="let item of listInterest" (click)="interestItem(item)">{{ item.name_category }}</li>
+</ul>
+
+<div class="focus-blackout"></div>

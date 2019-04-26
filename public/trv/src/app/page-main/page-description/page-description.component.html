@@ -1,0 +1,153 @@
+<section id="description-component" >
+    <div class="wrapper-media">
+        <div vscroll *ngIf="switcherMedia;else videoMedia" class="photo-column">
+            <div *ngFor="let photo of photoColumn" class="photo">
+                <img src="{{ photo.path_foto }}">
+                <p class="photo-title">
+                    <span>{{ photo.title }}</span>
+                </p>
+            </div>
+        </div>      
+        <ng-template #videoMedia>   
+            <div class="video-column">	
+                <div style="position:relative;height:0;padding-bottom:56.21%" class="video">
+                    <iframe width="949" height="534" src="https://www.youtube.com/embed/7_j8JRIJVlM?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div style="position:relative;height:0;padding-bottom:56.21%" class="video">
+                    <iframe width="949" height="534" src="https://www.youtube.com/embed/w-r9kJHEWFU" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+
+    <div class="static-description">	
+        <div class="control-panel">
+            <div class="left-control">
+                <div *ngIf="switcherMedia;else photoIcon" (click)="inversSwitcherMedia()" class="wrapper-icon-control">
+                    <i class="fas fa-video switch-video"></i>
+                </div>
+                <ng-template #photoIcon>
+                    <div (click)="inversSwitcherMedia()" class="wrapper-icon-control">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </ng-template>
+                <a *ngIf="this.authGuard.getLogIn()" routerLink="add" class="wrapper-icon-control">
+                    <i class="fas fa-plus-circle plus"></i>
+                </a>
+            </div>
+            <a [routerLink] ="'/'"  class="wrapper-icon-control">
+                <i class="far fa-times-circle close"></i>
+            </a>
+        </div>
+
+        <div class="wrapper-description">
+            <div class="wrapper-map">
+                <div id="map"></div>
+            </div>
+            <div class="description">
+                <h3 class="title-description">{{ title }}</h3>
+                <div class="paragraph">{{ description }}</div>
+            </div>	
+        </div>	
+    </div>
+
+    <div class="condition">
+        <table class="calendar">
+            <caption>
+                <span class="prev"><a href="#">←</a></span>
+                January 2012
+                <span class="next"><a href="#">→</a></span>
+            </caption>
+            <thead class="months">
+                <tr>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                    <th>Sun</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="off"><a href="#">26</a></td>
+                    <td class="off"><a href="#">27</a></td>
+                    <td class="off"><a href="#">28</a></td>
+                    <td class="off"><a href="#">29</a></td>
+                    <td class="off"><a href="#">30</a></td>
+                    <td class="off"><a href="#">31</a></td>
+                    <td><a href="#">1</a></td>
+                </tr>
+                <tr>
+                    <td class="open"><a href="#">2</a></td>
+                    <td class="open"><a href="#">3</a></td>
+                    <td class="open"><a href="#">4</a></td>
+                    <td class="open"><a href="#">5</a></td>
+                    <td class="open"><a href="#">6</a></td>
+                    <td><a href="#">7</a></td>
+                    <td><a href="#">8</a></td>
+                </tr>
+                <tr>
+                    <td class="today"><a href="#">9</a></td>
+                    <td class="open"><a href="#">10</a></td>
+                    <td class="open"><a href="#">11</a></td>
+                    <td class="open"><a href="#">12</a></td>
+                    <td class="open"><a href="#">13</a></td>
+                    <td><a href="#">14</a></td>
+                    <td><a href="#">15</a></td>
+                </tr>
+                <tr>
+                    <td class="open"><a href="#">16</a></td>
+                    <td class="open"><a href="#">17</a></td>
+                    <td class="celebration"><a href="#">18</a></td>
+                    <td class="open"><a href="#">19</a></td>
+                    <td class="open"><a href="#">20</a></td>
+                    <td><a href="#">21</a></td>
+                    <td><a href="#">22</a></td>
+                </tr>
+                <tr>
+                    <td class="open"><a href="#">23</a></td>
+                    <td class="open"><a href="#">24</a></td>
+                    <td class="open"><a href="#">25</a></td>
+                    <td class="open"><a href="#">26</a></td>
+                    <td class="open"><a href="#">27</a></td>
+                    <td><a href="#">28</a></td>
+                    <td><a href="#">29</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">30</a></td>
+                    <td><a href="#">31</a></td>
+                    <td class="off"><a href="#">1</a></td>
+                    <td class="off"><a href="#">2</a></td>
+                    <td class="off"><a href="#">3</a></td>
+                    <td class="off"><a href="#">4</a></td>
+                    <td class="off"><a href="#">5</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="opening-time">
+            <p>Czas pracy: 9.00 - 15.00</p>
+            <p>Ostatnie wejście nie później niż 1 godzinę przed zamknięciem</p>
+        </div>
+
+        <h3 class="price-title">Cennik</h3>
+        <div class="price">
+            <p>12 zł  – bilet normalny</p>
+            <p>6 zł  – bilet ulgowy (dla dzieci do lat 7 wstęp wolny)</p>
+            <p>30 zł  – bilet rodzinny*  (*za okazaniem: „Karty Dużej Rodziny”, „Regionalnej Karty Dużej Rodziny”, karty „Rodzina 3+”.)</p>
+            <p>120 zł - bilet wstępu na sesję foto-video ślubne (we wnętrzach)</p>
+            <p>120 zł - Bilet wstępu na sesję foto-video ślubne (we wnętrzach)</p>
+            <p>50 zł/30 minut - Opłata za przejażdżkę bryczką lub saniami</p>
+        </div>
+        <h3 class="kontakt-title">Kontakt</h3>
+        <div class="kontakt">
+            <p>Renata Zgrajka</p>
+            <p>tel. (+48) 81 710 28 21 </p>
+            <p>fax (+48) 81 710 28 65  </p>
+            <p>sekretariat@majdanek.eu  </p>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</section>

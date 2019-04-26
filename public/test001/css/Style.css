@@ -1,0 +1,63 @@
+﻿body,html,h3,p,figure,article,fieldset,ul{
+	margin:0;
+	padding: 0;
+}
+body,html{
+	height: 100%;
+	width: 100%;
+}
+body{ background:rgb(231, 231, 223); }
+*,:after,:before{box-sizing: border-box;}
+a{ color:inherit; text-decoration:none; }
+input:focus{ outline: none; }
+fieldset{ padding: 0; }
+
+.wrapper-root{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;   /*opcional for show hide menu not scroll*/
+	position: relative; /* for opacity */
+}
+main.wrapper-main{
+	width: 100%;
+	height: 100%;
+	background-color: rgb(231, 231, 223);
+	transition: margin-left 0.4s ease 0s;
+}
+.hover-blackout{
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+	pointer-events: none;
+	background-color: rgba(0,0,0,.4);
+	opacity: 0;
+	transition: opacity 0.3s; 
+	/* background-color: rgba(0,0,0,.64); */
+	/* background-color: rgba(43,44,47,.5);  */
+}
+.hover-blackout.focus{
+	pointer-events: auto;
+	opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

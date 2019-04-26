@@ -1,0 +1,15 @@
+section#placeTape{ 
+	display: inline-grid; 
+	grid-auto-columns: 320px; /* 272*/
+	grid-auto-rows: 200px; /* 170 */
+	grid-auto-flow: column;
+	grid-gap: 5px;
+	position: relative; /* for scroll*/
+}
+section#placeTape .wrapperPlace{ cursor: pointer; }
+section#placeTape .wrapperPlace img{
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}

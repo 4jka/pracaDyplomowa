@@ -1,0 +1,121 @@
+body{
+	margin:0;
+	padding: 0;
+	background:rgba(43,44,47,.8); 
+
+	/* font: 600 16px/18px 'Open Sans',sans-serif; */
+}
+*,:after,:before{box-sizing:border-box}
+a{ color:inherit; text-decoration:none; }
+input:focus{ outline: none; }
+fieldset{ 
+	border: none;
+	padding: 0;
+ }
+
+/** background */
+.root-bgc{
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	min-height: 250px;
+}
+.root-bgc,
+.bgcImage{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.bgcImage,
+.color-opacity{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+.bgcImage{ background-image: url('../images/log_in-1.jpg'); }
+.color-opacity{
+	display: flex;
+	/* background:rgba(40,57,101,.9); */
+	/* background:rgba(43,44,47,.7);  */
+	   background:rgba(43,44,47,.4); 
+}
+
+/** form */
+.wrapper-form{
+	width: 100%;
+	max-width: 525px;
+	min-height: 250px;
+	position:relative;
+	margin: auto;
+	padding: 20px 70px 110px 70px;
+	background: transparent;
+}
+.wrapper-form .input::placeholder{
+	font-family: "Open Sans", sans-serif;
+	font-size: 12px;
+    font-weight: 600;
+	text-transform: uppercase;
+	color:rgb(243, 236, 236);/* #aaa; */
+	text-align: center;
+}
+.sign-in,.sign-out{ display: none; }
+.sign-in.active,.sign-out.active{ display: block; }
+
+.wrapper-form  .input,
+.wrapper-form  .button{
+	display:block;
+	width:100%;
+	margin-bottom: 20px;
+	padding: 15px 20px;
+
+	border:none;
+	border-radius: 25px;
+
+	text-align: center;
+	font-family: 'Open Sans',sans-serif;
+	font-weight: 600;
+	line-height: 18px;
+	font-size: 14px;
+	color:rgb(243, 236, 236);
+}
+.wrapper-form  .input{
+	background:rgba(255,255,255,.2);
+}
+.wrapper-form .input:first-child{
+	border-bottom-right-radius: 5px;
+}
+.wrapper-form .input.straight{
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+.wrapper-form .button{
+	background:#1161ee;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	border-bottom-left-radius: 50px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.wrapper-form .button:hover{
+	background:#1162eeee;
+	color: rgba(212, 209, 209, 0.918);
+}
+.foot-lnk{
+	display: none;
+	text-align:center;
+	font-family: 'Open Sans',sans-serif;
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 18px;
+	color:#d0d2e0;
+	cursor: pointer;
+}
+.foot-lnk.active{display: block;}
+.foot-lnk:hover{
+	color: #dfe1eb;
+	/* color: white; */
+}
+

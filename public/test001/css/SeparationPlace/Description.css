@@ -1,0 +1,103 @@
+section#sectionSeparationPlace{
+	width: 100%;
+	height: 100%;
+	display: none;
+	position: relative;
+}
+section#sectionSeparationPlace.active{ display: flex; }
+
+.wrapperStaticDescription{
+	position: relative;
+	width: 45%;
+	height: 100%;
+	background-color: #eeeee8;
+	font-family: 'Mali','Comfortaa', cursive;
+}
+
+/* Control */
+.controlPanel{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	padding: 0 18px;
+	height: 55px;
+	z-index: 3;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.wrapperLeftControl{ display: flex; }
+.wrapperIconControl{
+	margin: 0 2px;
+	padding-top: 7px;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	cursor: pointer;
+	text-align: center;
+	transition: transform 0.2s;
+}
+.wrapperIconControl:hover{
+	transform: translate(0,-1px);
+}
+.wrapperIconControl:hover i{
+	color: #462424;
+}
+.controlPanel i{
+	font-size: 18px;
+	color: #5c5d5fee;
+}
+
+.plus,.iconOpenCategory{ display: none; }
+.plus.active,.iconOpenCategory.active{ display: block; }
+
+
+/* Decription */
+.descriptionPlace{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	padding-top: 55px;
+}
+.wrapperMapSP{
+	padding: 0 14px;
+}
+#map{
+	width: 100%;
+	height: 250px;
+	border-radius: 5px;
+	box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+
+/* Text */
+.titlePlaceSP{
+	padding-right: 15px;
+	text-align: center;
+	font-size: 15px;
+}
+.titlePlaceSP:first-letter{
+	font-size: 25px;
+}
+.descriptionText{
+	padding: 0 30px 50px;
+	margin-top: 15px;
+	color: rgb(29, 29, 29);
+}
+.paragraph{
+	margin-top: 13px;
+	width: 100%;
+	font-size: 13px;
+	text-align: justify;
+}
+.paragraph p{
+	margin-top: 15px;
+}
+span[class^='abstract']{
+	color: rgb(202, 58, 45);
+	cursor: pointer;
+	position: relative;
+}

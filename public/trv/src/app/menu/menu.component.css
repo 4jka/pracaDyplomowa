@@ -1,0 +1,35 @@
+.menu{
+	height: 100%;
+	height: 100%;
+	padding-top: 130px;
+	background-color: rgb(231, 231, 223);
+}
+
+.menuItem{
+	margin: 0 auto;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	
+	font-family: 'Mali', cursive;
+	color: #73767cee;
+	text-align: center;
+	cursor: pointer;
+	
+	transition: transform 0.2s;
+}
+.menuItem a{ display: block; }
+.menuItem .iconMenu{
+	display: block;
+	padding-top: 18px;
+	font-size: 35px;
+}
+.menuItem p{ font-size: 13px; }
+
+.menuItem:hover{
+	box-shadow: 5px 10px 20px rgba(0,0,0,0.2), -5px -10px 20px rgba(255,255,255,0.5);
+	transform: translate(0,-4px);
+}
+.menuItem:hover .iconMenu{
+	color: #462424;
+}

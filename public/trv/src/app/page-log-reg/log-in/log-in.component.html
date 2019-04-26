@@ -1,0 +1,25 @@
+<div class="wrapper-form">
+    <form [formGroup]="formLogin" (ngSubmit)="loginSubmit()" class="form">
+        <div class="centring-icons">
+            <i (click)="entryFacebook()" class="fab fa-facebook-f"></i>
+            <fieldset class="sign-in">
+                <input formControlName="email" id="sign-in-user" type="text" class="input" autocomplete="off" placeholder="Email Address">
+                <p *ngIf="formLogin.get('email').invalid && formLogin.get('email').touched" class="field-invalid straight">
+                    <span *ngIf="formLogin.get('email').errors['required']">Email nie może być pusty</span>
+                    <span *ngIf="formLogin.get('email').errors['email']">Niepoprawny format adresu email</span>
+                </p>         
+                <input formControlName="password" id="sign-in-pass" type="password" class="input straight" data-type="password" placeholder="Password">
+                <p *ngIf="formLogin.get('password').invalid && formLogin.get('password').touched" class="field-invalid straight">
+                    <span *ngIf="formLogin.get('password').errors['required']">Password nie może być pusty</span>
+                    <span *ngIf="formLogin.get('password').errors['lengthError'] && !formLogin.get('password').errors['required']">Password nie może być mniejsza 6 symboli</span>
+                </p>
+            </fieldset>
+            <input [disabled]="formLogin.invalid" type="submit" class="button-entry" value="Log in">
+        </div>   
+        <a [routerLink] = "'/form/sign-in'" class="button">Registration</a>
+    </form> 
+</div>
+
+
+          
+            

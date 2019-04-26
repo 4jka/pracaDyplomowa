@@ -1,0 +1,49 @@
+body{
+    background-color: black;
+}
+
+form{
+    margin: 0px auto;
+}
+input{
+    color: yellow;
+    margin: 5px;
+    background-color: black;
+    padding: 5px;
+    border: 1px solid red;
+}
+input::placeholder{
+color: yellow;
+}
+/* .container{
+    border: 1px solid yellow;
+    background-color: aqua;
+    color:  blueviolet;
+} */
+
+.form-container{
+    background-color: green;
+    margin: 0 auto;
+    padding: 50px;
+    border: 2px solid gray;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+}
+button{
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    padding: 5px 15px;
+    background-color: red;
+    border: none;
+}
+
+.textInfo{
+    color: red;
+    font-size: 60px;
+    position: absolute;
+    bottom: 100px;
+    left: 30%;
+    display: block;
+}

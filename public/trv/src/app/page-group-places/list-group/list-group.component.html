@@ -1,0 +1,17 @@
+<div class="wrapper-list-category">
+    <div class="static-list-category">
+       <div vscroll class="list-category">
+           <a *ngFor="let group of listGroup" class="category" 
+                    (click)="openGroup(group.id_group)"
+                    (mouseenter)="setMarkersGroup(group.id_group)">
+               <i (click)="deleteGroup(group,$event)" class="fa fa-trash" aria-hidden="true"></i>
+               <span>{{ group.name_group }}</span>
+           </a>
+           <div class="addGroup">
+               <input #field (keyup.enter)="createGroup(field.value)" type="text" class="addGroupField" placeholder="Dodaj Grupe">  
+               <i (click)="createGroup(field.value)" class="fas fa-plus-circle plus"></i>
+           </div>  
+       </div>
+    </div>	
+</div>
+

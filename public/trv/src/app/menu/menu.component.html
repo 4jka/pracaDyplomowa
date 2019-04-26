@@ -1,0 +1,30 @@
+<nav class="menu">
+    <ul>
+        <li class="menuItem homeItem">
+            <a [routerLink] ="'/'" >  
+                <i class="fas fa-home iconMenu"></i>
+                <p>Home</p>
+            </a>    
+        </li>
+        <li *ngIf="!this.authGuard.getLogIn(); else logOut" class="menuItem">
+            <a [routerLink] ="'/form/log-in'">
+                <i class="fas fa-sign-in-alt iconMenu"></i>
+                <p>Log/Reg</p>
+            </a>
+        </li>
+        <ng-template #logOut>
+        <li class="menuItem categoryItem">
+            <a [routerLink] ="'/group/list'">
+                <i class="fas fa-map-marker-alt iconMenu"></i>
+                <p>Category</p>
+            </a>
+        </li>   
+        <li (click)="logout()" class="menuItem">    
+            <div>
+                <i class="fas fa-sign-in-alt iconMenu"></i>
+                <p>Log Out</p>
+            </div>
+        </li>    
+        </ng-template>
+    </ul>
+</nav>

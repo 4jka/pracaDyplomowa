@@ -1,0 +1,58 @@
+
+
+
+
+INSERT INTO `travel`.`city`
+(`name_city`,
+`capital`)
+VALUES
+('Warszawa', 1);
+
+INSERT INTO `travel`.`city`
+(`name_city`,
+`capital`)
+VALUES
+('Lublin', 0);
+
+
+INSERT INTO `travel`.`region`
+(`name_region`)
+VALUES
+('Mazowieckie');
+
+INSERT INTO `travel`.`region`
+(`name_region`)
+VALUES
+('lubelskie');
+
+
+INSERT INTO `travel`.`category`
+(`name_category`,
+`id_place_fk`)
+VALUES
+('Historia', );
+
+INSERT INTO `travel`.`category`
+(`name_category`)
+VALUES
+('Klub');
+
+INSERT INTO `travel`.`category`
+(`name_category`)
+VALUES
+('Teatr');
+
+INSERT INTO `travel`.`category`
+(`name_category`)
+VALUES
+('Kosmos');
+
+INSERT INTO `travel`.`category`
+(`name_category`)
+VALUES
+('Zamek');
+
+INSERT INTO `travel`.`category`
+(`name_category`)
+VALUES
+('Muzeum');

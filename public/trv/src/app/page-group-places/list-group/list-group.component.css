@@ -1,0 +1,74 @@
+:host{
+	width: 25%;
+	height: 100%;
+}
+.wrapper-list-category{
+    width: 100%;
+	height: 100%;
+	padding: 0 3px;
+    background-color: rgb(235, 235, 227);
+}
+.static-list-category{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.list-category{
+	position: absolute;
+    top: 0;
+    padding: 30px;	
+	width: 100%;
+}
+
+/* Items Group and Input*/
+.category,
+.addGroup{
+	position: relative;
+	margin: 0 auto 10px;
+	display: block;	
+    width: 85%;
+ 
+    box-shadow: 1px 2.5px 5px rgba(0,0,0,0.2), -1px -2.5px 5px rgba(211, 210, 210, 0.5);
+}
+.category,
+.addGroupField{
+	padding: 0 30px 0 15px;
+	border-radius: 5px;
+	line-height: 40px;
+	
+	font-family: 'Mali', cursive;
+	color: #5f6166ee;
+	text-transform: capitalize;
+}
+.addGroupField{
+	width: 100%;
+	height: 40px;
+	border: none;
+	border-radius: 5px;
+	background-color: rgb(241, 238, 238);
+}
+.addGroup .plus{
+	position: absolute;
+	top: 13px;
+	right: 10px;
+	color: #5f6166ee;
+	cursor: pointer;
+}
+.category{
+	cursor: pointer;
+	transition: transform 0.2s;
+}
+.category:hover{
+    transform: translate(0,-2px);
+    color: black;
+}
+.category .fa-trash{
+	position: absolute;
+	padding: 13px 10px;
+	top: 0;
+	right: 0;
+}
+.category .fa-trash:hover{
+	color: #611f1f;
+}

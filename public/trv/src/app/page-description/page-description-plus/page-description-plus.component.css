@@ -1,0 +1,63 @@
+/* blackout */
+:host{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    opacity: 0;
+	transition: opacity 0.3s;
+	z-index: 4;
+	background-color: rgba(0,0,0,.4);
+}
+:host{
+	pointer-events: initial;
+	opacity: 1;
+}
+
+
+/* list Group */
+.list-group{
+	position: absolute;
+	top: 47px;
+    left: 22%;
+	width: 250px;
+	background-color: #f0f0e5;
+	border-radius: 5px;
+}
+.list-group .item-list-group:first-child{
+	padding: 7px 15px 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.list-group .item-list-group:last-child,
+.add-group-field{
+	padding: 5px 15px 7px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.item-list-group{
+	position: relative;
+	padding: 5px 15px;
+	font-family: 'Mali','Comfortaa', cursive;
+	text-align: center;
+	background-color: #f0f0e5;
+	cursor: pointer;
+	font-size: 16px;
+}
+.item-list-group::first-letter{
+	font-size: 20px;
+}
+.item-list-group:hover{
+	background-color: #e4e4d9;
+}
+.add-group-field{
+	width: 100%;
+	padding: 10px 15px;
+	border: none;
+	text-align: center;
+	background-color: #fdfdfc;
+	font-family: 'Mali','Comfortaa', cursive;
+	font-size: 14px;
+}

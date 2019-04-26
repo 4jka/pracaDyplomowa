@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Form</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+  <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+	<!-- <script>
+  // This is called with the results from from FB.getLoginStatus().
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback START');
+    console.log(response);
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      console.log('WYZYWAJEM TESTAPI');
+      testAPI();
+    } else {
+      // The person is not logged into your app or we are unable to tell.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this app.';
+    }
+  }
+
+
+  function checkLoginState() {
+    console.log('checkLoginState START');
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '324797741580062',
+      cookie     : true,  // enable cookies to allow the server to access 
+                          // the session
+      xfbml      : true,  // parse social plugins on this page
+      version    : 'v3.2' // use graph api version 2.8
+    });
+
+  
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+      console.log('TOKEN=:',response.authResponse.accessToken);
+      accessToken = accessToken.substring(13,accessToken.lastIndexOf("&")); 
+    });
+  };
+
+  
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  
+
+  
+ </script>
+ <script>
+  function fbLogin (){
+    console.log("ВХОДИМ НА ФБ")
+    FB.login(function(res) {
+         console.log('RES:::', res);
+         if (res.status === 'connected') {
+           var profileFields = ['id', 'first_name', 'last_name', 'link', 'gender', 'picture', 'email'];
+           var urlString = 'https://graph.facebook.com/me?access_token=' + accessToken + '&fields=' + profileFields.join(',');
+        console.log(urlString);
+        }
+
+        
+    }, { scope: 'public_profile,email'} );
+
+}
+
+function fbLogOut (){
+    console.log("ВЫХОДИМ ИЗ ФБ")
+    FB.logout(function(response) {
+   // Person is now logged out
+});
+
+}
+function sendToken (e){
+    e.preventDefault();
+
+    FB.login(function(res) {
+        if (res.status === 'connected') {
+            $.ajax({
+                url: '/auth/facebook',
+                method: 'POST',
+                data: { accessToken: res.authResponse.accessToken },
+                dataType: 'JSON',
+                success: function(res){
+                    console.log(res);
+                }
+            });
+        }
+    }, { scope: 'public_profile,email'} );
+
+    function chek (){
+      var asaccessToken = 'EAAEnZAt4Cvx4BAKQ7qfV9flpLGs7gAQJ4yYDqFIftAqcVjVgliUJrmA6h5obNiZAjmS5KjdSLA3ZCWGKQWyTuCABij0yRNKQH61PZAxF6ua9fvCWWHeyxQeJzZBd3kwO0LuhKdr0tTJZAlcfAhtczUADBbwgveo4n0TvhJ0ixJl5QrS6ZBODRkjCQ0p4ki3penJJvCMitZBYpAZDZD';
+      accessToken = accessToken.substring(13,accessToken.lastIndexOf("&")); 
+    }
+
+
+    function testAPI() {
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+
+        console.log('OBject response:::', response);
+    });
+  }
+}
+    </script> -->
+
+	<div class="color-opacity">
+			
+		<form class="wrapper-form" action="http://localhost:3000/api/login" method="POST">
+				<fieldset class="sign-in active">
+						<input id="user" type="text" class="input" placeholder="Username" name="email">
+						<input id="pass" type="password" class="input straight" data-type="password" placeholder="Password" name="password">
+				</fieldset>
+				<button type="submit" class="button" value="POST">Login</button>
+
+<a class="foot-lnk active" href="http://localhost:3000/api/facebook">Sing Up whith a Facebook</a>	
+<a class="foot-lnk active" href="http://localhost:3000/reg">Sing Up</a>	
+		</form>
+
+    		
+<!-- 
+    <button id="logFbBut" scope="public_profile,email" onlogin="checkLoginState();" onclick="fbLogin ();"> ВХОД ФБ</button>
+    <button id="logFbBut" scope="public_profile,email" onlogin="checkLoginState();" onclick="fbLogOut ();"> ВЫХОД ИЗ ФБ</button> -->
+    </div>
+
+
+</div>  
+
+		<script src="jScripts.js"></script>
+	</body>
+</html>

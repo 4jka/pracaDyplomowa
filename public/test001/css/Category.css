@@ -1,0 +1,48 @@
+#sectionCategory{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#sectionCategory.active{ display: flex;}
+.wrapperMenuCategory{
+    width: 25%;
+	height: 100%;
+	padding: 0 3px;
+    background-color: rgb(235, 235, 227);
+    display: flex;
+}
+.staticPhotoCategory{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.photoColumnCategory{
+	position: absolute;
+	top: 0;
+}
+section#sectionCategory .photo img{
+	width: 100%;
+	cursor: pointer;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+/* map */
+.wrapperMapCategory{
+    width: 75%;
+	height: 100%;
+	position: relative;
+}
+#mapCategory{
+    width: 100%;
+    height: 100%;
+}
+.routeIcon{
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	font-size: 25px;
+	z-index: 1;
+	cursor: pointer;
+}

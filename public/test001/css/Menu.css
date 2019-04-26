@@ -1,0 +1,49 @@
+aside.wrapperMenu{
+	position: absolute;
+	width: 160px;
+	left: -150px;
+	top: 0;
+	bottom: 0;
+	z-index: 3;
+	padding-right: 10px;
+
+	background-color: transparent;
+	transition: left 400ms ease 0s;
+}
+aside.wrapperMenu:hover{ left: 0;}
+aside.wrapperMenu:hover ~ main.wrapper-main{ margin-left: 160px;}
+
+.menu{
+	height: 100%;
+	height: 100%;
+	padding-top: 40px;
+	background-color: rgb(231, 231, 223);
+}
+
+.menuItem{
+	margin: 0 auto;
+	display: block;/* for a */
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	
+	font-family: 'Mali', cursive;
+	color: #73767cee;
+	text-align: center;
+	cursor: pointer;
+	
+	transition: transform 0.2s;
+}
+.menuItem .iconMenu{
+	display: block;
+	padding-top: 18px;
+	font-size: 35px;
+}
+.menuItem p{ font-size: 13px; }
+.menuItem:hover{
+	box-shadow: 5px 10px 20px rgba(0,0,0,0.2), -5px -10px 20px rgba(255,255,255,0.5);
+	transform: translate(0,-4px);
+}
+.menuItem:hover .iconMenu{
+	color: #462424;
+}

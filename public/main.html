@@ -1,0 +1,81 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Main Page</title>
+</head>
+
+<body>
+
+
+
+
+
+    <div class="form-container">
+
+        <form action="http://localhost:3000/api/addPlace" method="POST">
+            <div>
+                <input type="text" class="form-control" placeholder="Enter country" name="id_country">
+            </div>
+            <div>
+                <input type="text" class="form-control" placeholder="Enter region" name="id_region">
+            </div>
+            <div>
+                <input type="text" class="form-control" placeholder="Enter city" name="id_city">
+            </div>
+            <div>
+                <input type="text" class="form-control" placeholder="Enter coordinate" name="place_coordinate">
+            </div>
+            <div>
+                <input type="text" class="form-control" placeholder="Enter place name" name="name_place">
+            </div>
+            <div>
+                <input type="text" class="form-control" placeholder="Enter title" name="title">
+            </div>
+            <div>
+                <input type="text" class="form-control" placeholder="Enter category" name="category">
+            </div>
+            <div>
+                <input type="text" class="form-control" placeholder="Enter description" name="description">
+            </div>
+            <button type="submit" class="btn btn-primary" value="POST">Submit</button>
+        </form>
+
+        <form action="http://localhost:3000/api/addFoto" method="POST">
+            <div>
+                <input id="name_foto" type="text" class="form-control" placeholder="Enter place ID" name="id_place_fk">
+            </div>
+            <div>
+                <input type="text" class="form-control" placeholder="Enter path to foto" name="path_foto">
+            </div>
+            
+            <button type="submit" class="btn btn-primary" value="POST">Submit</button>
+        </form>
+
+
+
+        <form action="http://localhost:3000/api/addCategory" method="POST">
+            <div>
+                <input type="text" class="form-control" placeholder="Enter category" name="name_category">
+            </div>
+            <div>
+                <input type="text" class="form-control" placeholder="Enter place ID" name="place_id_place">
+            </div>
+            
+            <button type="submit" class="btn btn-primary" value="POST">Submit</button>
+        </form>
+    <div class="info">
+        <h1 class="textInfo">VADIM SKOTYNIAKA</h1>
+    </div>
+
+    </div>
+
+<script src="js/script.js"></script>
+</body>
+
+</html> 

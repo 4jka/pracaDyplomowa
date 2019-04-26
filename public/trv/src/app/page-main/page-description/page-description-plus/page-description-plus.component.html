@@ -1,0 +1,7 @@
+<ul class="list-group">
+    <li *ngFor="let item of listGroup" (click)="addPlacesGroup(item)" class="item-list-group">
+        {{ item.name_group }}
+    </li>
+    <input #addGroup type="text" class="add-group-field" placeholder="Dodaj Grupe" 
+        (keyup.enter)="createGroup(addGroup.value)" (blur)="hideGroupsList()">
+</ul>

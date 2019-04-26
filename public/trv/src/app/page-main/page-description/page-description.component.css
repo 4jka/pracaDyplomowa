@@ -1,0 +1,232 @@
+:host{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	z-index: 7;
+}
+
+section#description-component{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: flex;
+    background-color: rgb(231, 231, 223);
+}
+
+/* Control Panel */
+.control-panel{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+    margin: 0 auto;
+    
+	padding: 0 18px;
+	height: 52px;
+    z-index: 3;
+    
+    display: flex;
+    justify-content: space-between;
+    
+	align-items: center;
+	background-color: #eeeee8;
+}
+.left-control{
+	display: flex;
+}
+.wrapper-icon-control{
+	margin: 0 2px;
+	padding-top: 7px;
+	width: 35px;
+    height: 35px;
+    
+    border-radius: 50%;
+	cursor: pointer;
+	text-align: center;
+	transition: transform 0.2s;
+}
+.control-panel i{
+	font-size: 18px;
+	color: #5c5d5fee;
+}
+.wrapper-icon-control:hover{
+	transform: translate(0,-1px);
+}
+.wrapper-icon-control:hover i{
+	color: #462424;
+}
+
+
+/* Photo Column */
+.wrapper-media{
+	position: relative;
+	width: 25%;
+	height: 100%;
+    padding-left: 3px;
+    overflow: hidden;
+	background-color: rgb(224, 224, 213);
+}
+.photo-column{
+	position: absolute;
+	top: 0;
+	display: block;
+}
+.photo-column .photo{ 
+	position: relative;
+	width: 100%;
+}
+section#description-component .photo img{
+	width: 100%;
+	cursor: pointer;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+.photo-title{
+	position: absolute;
+	z-index: 2;
+	bottom: 4px;
+	right: 0px;
+	padding: 15px;
+	background: rgba(0, 0, 0, 0.8);
+}
+.photo-title span{
+	font-family: 'Mali','Comfortaa', cursive;
+	color: white;
+	font-size: 13px;
+	cursor: pointer;
+}
+
+
+
+/* Video Column */
+.video-column .video{
+	margin-bottom: 3px;
+}
+
+
+/* Description */
+.static-description{
+	position: relative;
+	width: 45%;
+	height: 100%;
+    background-color: #eeeee8;
+    
+	font-family: 'Mali','Comfortaa', cursive;
+}
+.wrapper-description{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	padding-top: 55px;
+}
+
+/* Map */
+.wrapper-map{
+	padding: 0 14px;
+}
+#map{
+	width: 100%;
+	height: 250px;
+	border-radius: 5px;
+	box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+.title-description{
+	padding-right: 15px;
+	text-align: center;
+	font-size: 15px;
+	font-weight: 600;
+}
+.title-description:first-letter{
+	font-size: 25px;
+}
+.description{
+	padding: 0 30px;
+	margin-top: 15px;
+	color: rgb(29, 29, 29);
+}
+.paragraph{
+	margin-top: 13px;
+	font-size: 13px;
+	text-align: justify;
+}
+.paragraph p{
+	margin-bottom: 10px;
+}
+
+
+
+/* Calendar Price Kontakt */
+.condition{
+	margin-top: 15px;
+    font-family: 'Mali','Comfortaa', cursive;
+	position: relative;
+	width: 17%;
+    height: 100%;
+    line-height: 1.25;
+}
+.condition td{
+	padding: 5px;
+}
+.calendar{
+	margin: 10px auto 0;
+}
+.months tr th{
+	line-height: 30px;
+	font-weight: 600;
+}
+.today{
+	background-color: rgb(51, 164, 230);
+}
+.off{
+	background: #eee;
+	color: rgb(145, 139, 139);
+}
+.open{
+	background-color: rgb(187, 180, 132);
+}
+.celebration{
+	background-color: rgb(199, 94, 45);
+}
+.kontakt-title,
+.price-title{
+	padding-right: 15px;
+	text-align: center;
+	font-size: 15px;
+	font-weight: 600;
+}
+.kontakt-title:first-letter,
+.price-title:first-letter{
+	font-size: 25px;
+}
+.opening-time,.kontakt{
+	padding: 0 10px;
+	margin-top: 10px;
+	font-size: 13px;
+	text-align: center;
+}
+.opening-time p,.kontakt p,.price p{
+	margin-bottom: 7px;
+}
+.price{
+	padding: 0 0 0 10px;
+	margin-top: 10px;
+	font-size: 13px;
+	text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

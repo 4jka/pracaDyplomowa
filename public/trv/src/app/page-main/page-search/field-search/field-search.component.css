@@ -1,0 +1,98 @@
+.wrapper-searchField{
+	width: 100%;
+	display: flex;
+	/* background: #d4d4d063;  */
+	/* box-shadow: 2px 2px 5px rgba(0,0,0,0.2), -2px -2px 5px rgba(255,255,255,0.5); */
+}
+.searchField{
+	display: block;
+	width: 50%;
+    margin-top: 3px;
+	padding: 7px 10px;
+    border-radius: 5px;
+
+	transform: skewX(-12deg);
+	/* background: #d4d4d063;  */
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.2), -2px -2px 5px rgba(255,255,255,0.5);
+
+    border: none;
+	background: transparent;
+	caret-color: rgba(156, 156, 154, 0.808) !important;
+    font-family: 'Mali', cursive;
+    font-size: 16px;
+    color: rgba(134, 134, 134, 0.808);
+	text-align: left;
+}
+.searchField.focus{
+	box-shadow: none;
+	background-color: rgb(226, 224, 224);
+}
+
+.searchField:first-child{
+	margin-right: 10px;
+}
+.searchField::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	color: rgba(134, 134, 134, 0.808);
+  }
+.searchField::-moz-placeholder { /* Firefox 19+ */
+	color: rgba(134, 134, 134, 0.808);
+  }
+.searchField:-ms-input-placeholder { /* IE 10+ */
+	color: rgba(134, 134, 134, 0.808);
+  }
+.searchField:-moz-placeholder { /* Firefox 18- */
+	color: rgba(134, 134, 134, 0.808);
+  }
+
+
+/* list */
+.searchList{
+	margin-top: 10px;
+	width: 100%;
+	border-radius: 5px;
+	background-color: rgb(226, 224, 224);
+	list-style-type: none;
+	display: none;
+}
+.searchList.focus{
+	display: block;
+}
+.searchList .list-item:first-child{
+	padding-top: 7px;
+}
+.searchList .list-item:last-child{
+	padding-bottom: 7px;
+}
+.searchList .list-item{
+	padding: 5px 5px 5px 30px;
+	color: rgba(134, 134, 134, 0.808);
+    font-family: 'Mali', cursive;
+    font-size: 16px;
+	cursor: pointer;
+}
+.searchList .list-item:last-child{
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.searchList .list-item:hover{
+	background-color: rgb(211, 209, 209);
+}
+
+
+/* blackout */
+.focus-blackout{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    opacity: 0;
+	transition: opacity 0.3s;
+	z-index: -1;
+    background-color: rgba(0,0,0,.4);
+}
+.focus-blackout.focus{
+	pointer-events: initial;
+	opacity: 1;
+}

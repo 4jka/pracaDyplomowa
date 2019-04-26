@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Travel</title>
+		<link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/Menu.css">
+		<link rel="stylesheet" href="css/SeparationPlace/Column.css">
+		<link rel="stylesheet" href="css/SeparationPlace/Description.css">
+		<link rel="stylesheet" href="css/searchSection/ContainerGridImg.css">
+		<link rel="stylesheet" href="css/searchSection/SearchField.css">
+		<link rel="stylesheet" href="css/Category.css">
+		<link rel="stylesheet" href="css/Style.css">
+  </head>
+<body>
+ <div class="wrapper-root">
+
+	<aside class="wrapperMenu">
+		<div class="menu">
+			<div class="menuItem homeItem">
+				<i class="fas fa-home iconMenu"></i>
+				<p>Home</p>
+			</div>
+			<div class="menuItem categoryItem">
+				<i class="fas fa-map-marker-alt iconMenu"></i>
+				<p>Category</p>
+			</div>
+			<a href="./form/index.html" class="menuItem">
+				<i class="fas fa-sign-in-alt iconMenu"></i>
+				<p>Log/Reg</p>
+			</a>
+		</div>
+	</aside>
+	<div class="hover-blackout"></div>
+	
+	<main class="wrapper-main">	
+		<section class="sectionGridImg active">
+			<div class="wrapperSearch">
+				<div class="wrapperChoosedCryteria"></div>
+				<input type="text" class="searchField" placeholder="Search">
+				<ul class="listSearch"></ul>
+			</div>	
+					
+			<div class="centringContainer">
+				<section id="containerGridPlaces"></section>
+			</div>
+		</section>
+
+		<section id="sectionSeparationPlace" >
+			<div class="wrapperMediaSp">
+				<div class="staticMediaSP">
+					<div class="columnPhotoSP active"></div>
+					<div class="columnVideoSP">	</div>
+				</div>	
+			</div>
+
+			<div class="wrapperStaticDescription">	
+				<div class="controlPanel">
+					<div class="wrapperLeftControl">
+						<div class="wrapperIconControl"><i class="fas fa-video switchVideo"></i></div>
+						<div class="wrapperIconControl">
+							<i class="fas fa-plus-circle plus"></i>
+							<i class="fas fa-map-marker-alt iconOpenCategory"></i>
+						</div>
+					</div>
+					<div class="wrapperIconControl"><i class="far fa-times-circle close"></i></div>
+				</div>
+				
+				<div class="descriptionPlace">
+					<div class="wrapperMapSP">
+						<div id="map"></div>
+					</div>
+					<div class="descriptionText">
+						<h3 class="titlePlaceSP"></h3>
+						<div class="paragraph"></div>
+					</div>	
+				</div>	
+			</div>
+		</section>
+
+		<section id="sectionCategory">
+			<div class="wrapperMenuCategory">
+				<div class="staticPhotoCategory">
+					<div class="photoColumnCategory"></div>
+				</div>	
+			</div>
+			<div class="wrapperMapCategory">
+				<i class="fas fa-route routeIcon"></i>
+				<div id="mapCategory"></div>
+			</div>
+		</section>
+
+	</main>	
+ </div>
+  <script src="js/DataBase.js"></script>
+  <script src="js/Scripts.js"></script>
+  <script src="js/GoogleApiMaps.js"></script>
+  <script src="js/Scroll.js"></script>
+  <script src="js/Bee.js"></script>
+  <script src="js/SearchField.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiXdsvBZZd9qfh1REYOcjMFBjaDEpnBdo&callback=initMap&language=pl" async defer></script>
+</body>
+</html>

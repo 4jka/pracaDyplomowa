@@ -1,0 +1,28 @@
+.wrapperMediaSp{
+	width: 25%;
+	height: 100%;
+	padding-left: 3px;
+	background-color: rgb(210, 210, 200);
+}
+.staticMediaSP{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.columnPhotoSP{
+	position: absolute;
+	top: 0;
+	display: none;
+}
+
+.columnPhotoSP.active{ display: block; }
+.columnVideoSP{ display: none; }
+.columnVideoSP.active{ display: block; }
+.columnPhotoSP .photo{ width: 100%;}
+section#sectionSeparationPlace .photo img{
+	width: 100%;
+	cursor: pointer;
+	-o-object-fit: cover;
+	object-fit: cover;
+}

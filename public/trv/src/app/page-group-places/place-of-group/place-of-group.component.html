@@ -1,0 +1,11 @@
+<div class="wrapper-media">
+  <div vscroll class="photo-column">
+    <div *ngFor="let place of this.dataPlaces._places" class="photo">
+        <i (click)="deletePlace(place)" class="fa fa-trash" aria-hidden="true"></i>
+        <img src="{{place.path_foto }}">
+        <p class="photo-title">
+            <span>{{ place.name_place }}</span>
+        </p>
+    </div>
+  </div>   
+</div>
